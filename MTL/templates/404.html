@@ -26,10 +26,7 @@
         <span class="subtitle fg-white"> 2023 © MCommander</span>
     </div>
     <ul class="sidebar-menu">
-        <li><a href="{{ url_for('index') }}"><span class="mif-home icon"></span>主页/Home</a></li>
-        <li><a href="{{ url_for('list') }}"><span class="mif-books icon"></span>歌曲列表/List</a></li>
-        <li class="divider"></li>
-        <li><a href="{{ url_for('admin') }}"><span class="mif-images icon"></span>管理/Admin</a></li>
+        {{ static_sidebar_menu|safe }}
     </ul>
 </aside>
 <div class="shifted-content-2 h-100 p-ab">
@@ -40,8 +37,8 @@
     </div>
 
     <div class="h-100 p-4">
-        <h2>HTTP Error</h2>
-        <h2>{{error}}</h2>
+        <h2>HTTP Error 404</h2>
+        <h2>Not Found</h2>
     </div>
 </div>
 <script src="https://cdn.korzh.com/metroui/v4/js/metro.min.js"></script>

@@ -26,10 +26,7 @@
         <span class="subtitle fg-white"> 2023 © MCommander</span>
     </div>
     <ul class="sidebar-menu">
-        <li><a href="{{ url_for('index') }}"><span class="mif-home icon"></span>主页/Home</a></li>
-        <li><a href="{{ url_for('list') }}"><span class="mif-books icon"></span>歌曲列表/List</a></li>
-        <li class="divider"></li>
-        <li><a href="{{ url_for('admin') }}"><span class="mif-images icon"></span>管理/Admin</a></li>
+        {{ static_sidebar_menu|safe }}
     </ul>
 </aside>
 <div class="shifted-content-2 h-100 p-ab">

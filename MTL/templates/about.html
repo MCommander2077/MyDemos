@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>About</title>
+    <link href="../static/css/index.css" rel="stylesheet">
+    <link href="https://cdn.korzh.com/metroui/v4/css/metro-all.min.css" rel="stylesheet">
+</head>
+
+<body>
+<aside class="sidebar pos-absolute z-2"
+       data-role="sidebar"
+       data-shift=".shifted-content-2"
+       data-static="md"
+       data-static-shift=".shifted-content-2"
+       data-toggle="#sidebar-toggle-4"
+       id="sb4">
+    <div class="sidebar-header" data-image="https://metroui.org.ua/images/sb-bg-1.jpg">
+        <!--
+        <div class="avatar">
+            <img data-role="gravatar" data-email="sergey@pimenov.com.ua">
+        </div>
+        -->
+        <span class="title fg-white">Mander T21-F List</span>
+        <span class="subtitle fg-white"> 2023 © MCommander</span>
+    </div>
+    <ul class="sidebar-menu">
+        {{ static_sidebar_menu|safe }}
+    </ul>
+</aside>
+<div class="shifted-content-2 h-100 p-ab">
+    <div class="appbar pos-absolute bg-red z-1" data-role="appbar">
+        <button class="app-bar-item c-pointer" id="sidebar-toggle-4">
+            <span class="mif-menu fg-white"></span>
+        </button>
+    </div>
+
+    <div class="h-100 p-4">
+        <h1>关于 MCommander's T21-F List</h1>
+        <p>这个项目在我刚入坑冰与火时就有了想法，只不过一直没实现罢了。当时我并不知道有鲨鱼的那个网站，于是想自己做一个，但当时并没有那个能力所以我也就能想想（</p>
+        <p>但现在终于能把这个当时看来不可能的项目用1小时复现了出来，之前追求的是功能，UI随便做就行，知道鲨鱼网站的出现，我知道不做好UI没有人会用的。所以我就使用了metroUI将这个项目的前端整个重构了一遍，也才有了现在这还算能看得过去的UI</p>
+        <h2>另外：此网站使用ManderCDN的统计功能来记录下载数量，但此功能不会盗用您的任何数据！</h2>
+    </div>
+</div>
+<script src="https://cdn.korzh.com/metroui/v4/js/metro.min.js"></script>
+</body>
+
+</html>
