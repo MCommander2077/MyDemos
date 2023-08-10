@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>铺面详情/LevelINFO</title>
+    <link href="https://cdn.korzh.com/metroui/v4/css/metro-all.min.css" rel="stylesheet">
+</head>
+
+<body>
+<aside class="sidebar pos-absolute z-2"
+       data-role="sidebar"
+       data-toggle="#sidebar-toggle-4"
+       id="sb4"
+       data-shift=".shifted-content-2"
+       data-static-shift=".shifted-content-2"
+       data-static="md">
+    <div class="sidebar-header" data-image="https://metroui.org.ua/images/sb-bg-1.jpg">
+        <!--
+        <div class="avatar">
+            <img data-role="gravatar" data-email="sergey@pimenov.com.ua">
+        </div>
+        -->
+        <span class="title fg-white">Mander T21-F List</span>
+        <span class="subtitle fg-white"> 2023 © MCommander</span>
+    </div>
+    <ul class="sidebar-menu">
+        <li><a href="../../"><span class="mif-home icon"></span>主页/Home</a></li>
+        <li><a href="../../list"><span class="mif-books icon"></span>歌曲列表/List</a></li>
+        <li class="divider"></li>
+        <li><a href="../../about"><span class="mif-images icon"></span>关于这个项目/About This Project</a></li>
+    </ul>
+</aside>
+<div class="shifted-content-2 h-100 p-ab">
+    <div class="appbar pos-absolute bg-red z-1" data-role="appbar">
+        <button class="app-bar-item c-pointer" id="sidebar-toggle-4">
+            <span class="mif-menu fg-white"></span>
+        </button>
+    </div>
+
+    <div class="h-100 p-4">
+        <h2>{{ item.song }}</h2>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>下载链接/Download</th>
+                {% if item.workshopLink %}
+                    <th>创意工坊链接/WorkShopLink</th>
+                {% endif %}
+                <th>音乐作者/Artist</th>
+                <th>铺面作者/Author</th>
+                <th>难度/Difficulty</th>
+                <th>体感难度/Feeling</th>
+                <th>视频链接/Video</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                {% if item.dlLink %}
+                    <td><a href="{{ item.dlLink }}" target="_blank">国外下载</a>  <a href="../../dl?url={{ item.dlLink }}" target="_blank">国内下载</a></td>
+                {% else %}
+                    <td>暂无下载方式</td>
+                {% endif %}
+
+                {% if item.workshopLink %}
+                    <td><a href="{{ item.workshopLink }}" target="_blank">{{ item.workshopLink }}</a></td>
+                {% endif %}
+                <td>{{ item.artist }}</td>
+                <td>{{ item.creator }}</td>
+                <td>{{ item.diff }}</td>
+                <td>{{ item.feeling }}</td>
+
+                {% if item.vidLink %}
+                    <td><a href="{{ item.vidLink }}" target="_blank">{{ item.vidLink }}</a></td>
+                {% endif %}
+
+
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<script src="https://cdn.korzh.com/metroui/v4/js/metro.min.js"></script>
+</body>
+
+</html>

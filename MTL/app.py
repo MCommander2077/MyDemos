@@ -74,7 +74,7 @@ def main_loop():
 
 
 update_key = threading.Thread(target=main_loop)
-update_key.setDaemon = True
+update_key.Daemon = True
 update_key.start()
 
 
