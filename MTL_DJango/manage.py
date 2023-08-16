@@ -4,7 +4,8 @@ import os
 import sys
 import threading
 import time
-
+import gdown
+from bs4 import BeautifulSoup
 import requests
 import mainloop
 
