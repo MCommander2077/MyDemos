@@ -16,16 +16,28 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+
 from index import views as index
 from list import views as list
 from info import views as info
 from about import views as about
+from dl import views as dl
+from goto import views as goto
 
 urlpatterns = [
+
+    # ---------------------------
+    # python manage.py migrate auth
+    # python manage.py migrate
+    # 如果遇到数据库错误请输入以上内容
     path('admin/', admin.site.urls),
+    # ---------------------------
+
     path('', index.view),
     path('list/', list.view),
     path('song/<int:song_id>', info.view),
-    path('about/', about.view)
+    path('about/', about.view),
+    path('dl/', dl.view),
+    path('goto/', goto.view)
 
 ]

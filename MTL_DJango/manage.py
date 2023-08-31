@@ -4,25 +4,15 @@ import os
 import sys
 import threading
 import time
-
+import gdown
+from bs4 import BeautifulSoup
 import requests
+import mainloop
 
-def mainloop():
-    while True:
-        try:
-            data = requests.get('https://be.t21c.kro.kr/levels').text
-            #data = data['results']
-        except Exception as error:
-            print(f'data got failed,reason:{error}\nReacquiring...')
-        else:
-            with open('data.txt','w+') as f:
-                f.write(data)
-                f.close()
-            print('data has been gotten')
-            time.sleep(3600)
+
 
 def main():
-    mainloop_thread = threading.Thread(target=mainloop)
+    mainloop_thread = threading.Thread(target=mainloop.mainloop)
     mainloop_thread.daemon = True
     mainloop_thread.start()
     """Run administrative tasks."""

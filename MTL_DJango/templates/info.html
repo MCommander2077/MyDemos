@@ -57,7 +57,7 @@
             <tbody>
             <tr>
                 {% if item.dlLink %}
-                    <td><a href="{{ item.dlLink }}" target="_blank">国外下载</a>  <a href="../../dl?url={{ item.dlLink }}" target="_blank">国内下载</a></td>
+                    <td><a href="../../goto?url={{ item.dlLink }}" target="_blank">国外下载</a>  <a href="https://cdn.mander.eu.org/api/download?url={{ item.dlLink }}&key={{ item.token }}" target="_blank">国内下载</a></td>
                 {% else %}
                     <td>暂无下载方式</td>
                 {% endif %}
