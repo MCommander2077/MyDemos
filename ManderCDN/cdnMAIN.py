@@ -1,5 +1,5 @@
 # --------------THE KEY-----------------
-CDN_KEY = 'M@nder_P^$$VV0RD][]['
+CDN_KEY = 'your_password'
 # --------------THE KEY-----------------
 
 import hashlib
